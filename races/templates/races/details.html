@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} {{race_details.name}} {% endblock title %}
+{% block content %}
+<main>
+    <div>
+        <h1> {{race_details.name}} </h1>
+
+        <h2> {{race_details.name}} </h2>
+        <div> {{race_details.location}}</div>
+        <div>{{race_details.date}}</div>
+        {% if race_details.has_passed == True %}
+        <div> Race has passed </div>
+        {% endif %}
+        <div> <img class="track" src = "{{race_details.track}}"> </div>
+        <div>{{race_details.comment}}</div>
+
+    </div>
+</main>
+{% endblock content %}
